@@ -2,5 +2,22 @@
   "name": "stacklens",
   "version": "0.0.1",
   "description": "Semantic technology stack projection toolkit.",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "node --test dist/**/*.test.js",
+    "ci": "npm run typecheck && npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "eslint": "^10.0.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1"
+  }
 }
