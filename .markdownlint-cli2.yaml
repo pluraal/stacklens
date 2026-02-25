@@ -1,0 +1,48 @@
+# markdownlint-cli2 configuration
+# See https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+# Glob patterns for files to lint
+globs:
+  - "**/*.md"
+
+# Glob patterns for files to ignore
+ignores:
+  - "node_modules"
+  - "dist"
+
+# markdownlint configuration
+config:
+  # Default: all rules enabled with default settings
+  default: true
+  
+  # MD013: Line length - disabled for specs and documentation
+  # Rationale: Technical specifications often require long lines for clarity
+  MD013: false
+  
+  # MD025: Multiple top-level headings
+  # Rationale: Specifications use numbered H1 sections (e.g., "1. File Structure", "2. Core Concepts")
+  MD025: false
+  
+  # MD029: Ordered list item prefix
+  # Rationale: Numbered lists in specs may use non-sequential numbering intentionally
+  MD029: false
+  
+  # MD030: Spaces after list markers
+  # Rationale: Current spec formatting uses 2 spaces which is valid
+  MD030: false
+  
+  # MD031: Fenced code blocks surrounded by blank lines
+  # Rationale: Sometimes code blocks need to be adjacent to other content
+  MD031: false
+  
+  # MD033: Inline HTML - allowed
+  # Rationale: Sometimes necessary for complex documentation layouts
+  MD033: false
+  
+  # MD040: Fenced code language specification - disabled
+  # Rationale: Some code blocks are intentionally language-agnostic
+  MD040: false
+  
+  # MD041: First line in file should be a top level heading
+  # Rationale: Some files (like templates) may have front matter or comments first
+  MD041: false
