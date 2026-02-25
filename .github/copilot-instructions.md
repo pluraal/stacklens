@@ -11,9 +11,17 @@ The project is early-stage. `src/` is mostly scaffolding; the authoritative desi
 ```bash
 npm run typecheck   # type-check without emitting
 npm run lint        # ESLint (typescript-eslint)
+npm run lint:md     # Markdown linting (markdownlint-cli2)
+npm run lint:md-links # Markdown link validation
 npm run build       # tsc → dist/
 npm run test        # node --test dist/**/*.test.js  (must build first)
-npm run ci          # typecheck + lint + build (used in PR checks)
+npm run ci          # Full validation: typecheck + lint + lint:md + lint:md-links + build
+```
+
+**After editing any Markdown file**, always run:
+
+```bash
+npm run lint:md && npm run lint:md-links
 ```
 
 **Run a single test file:**
@@ -87,3 +95,4 @@ technologies: # required
 - Tests are colocated with source as `*.test.ts` files.
 - Filenames use **kebab-case** (e.g., `stackfile-parser.ts`).
 - The `specs/` directory is not compiled — it is specification, not code. Implementations must stay in sync with it.
+- **Markdown validation is mandatory** — after editing any `.md` file, run `npm run lint:md && npm run lint:md-links` to verify syntax and links. All markdown files must pass validation before committing.
