@@ -1,0 +1,21 @@
+{
+  "ignorePatterns": [
+    {
+      "comment": "Ignore localhost and example URLs",
+      "pattern": "^https?://localhost"
+    },
+    {
+      "comment": "Ignore example.com domains",
+      "pattern": "^https?://(www\\.)?example\\.(com|org|net)"
+    },
+    {
+      "comment": "Ignore file:// protocol - often false positives on relative paths",
+      "pattern": "^file://"
+    }
+  ],
+  "timeout": "10s",
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackRetryDelay": "5s",
+  "aliveStatusCodes": [200, 206, 301, 302, 307, 308, 403, 429]
+}

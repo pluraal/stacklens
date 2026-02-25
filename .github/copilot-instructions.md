@@ -40,7 +40,7 @@ dist/         Build output (gitignored)
 
 `src/index.ts` is the public API entry point; all public exports go through it.
 
-**Governance**: All design and implementation decisions must align with the constitution at [.specify/memory/constitution.md](.specify/memory/constitution.md). The 10 core principles are non-negotiable technical invariants derived from `specs/tech.md`.
+**Governance**: All design and implementation decisions must align with the constitution at [../.specify/memory/constitution.md](../.specify/memory/constitution.md). The 10 core principles are non-negotiable technical invariants derived from `specs/tech.md`.
 
 ### Domain Model (from specs)
 

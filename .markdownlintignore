@@ -1,0 +1,8 @@
+# markdownlint ignore patterns
+# Patterns use .gitignore syntax
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/

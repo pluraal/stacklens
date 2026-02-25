@@ -28,8 +28,14 @@ jobs:
       - name: Type-check
         run: npm run typecheck
 
-      - name: Lint
+      - name: Lint TypeScript
         run: npm run lint
+
+      - name: Lint Markdown
+        run: npm run lint:md
+
+      - name: Check Markdown Links
+        run: npm run lint:md-links
 
       - name: Build
         run: npm run build
