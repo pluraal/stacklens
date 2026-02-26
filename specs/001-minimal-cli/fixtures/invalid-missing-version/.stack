@@ -1,0 +1,5 @@
+technologies:
+  - id: typescript
+    detect:
+      include:
+        - "**/*.ts"

@@ -46,3 +46,13 @@ config:
   # MD041: First line in file should be a top level heading
   # Rationale: Some files (like templates) may have front matter or comments first
   MD041: false
+
+  # MD024: Multiple headings with the same content - disabled
+  # Rationale: Spec and task files intentionally reuse heading names (e.g., "Fixtures",
+  #            "Tests", "Implementation") across different phases/sections
+  MD024: false
+
+  # MD032: Lists should be surrounded by blank lines - disabled
+  # Rationale: Spec documentation uses lists immediately after code blocks or headings
+  #            as part of structured content; enforcing blank lines reduces readability
+  MD032: false

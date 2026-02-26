@@ -1,0 +1,8 @@
+version: "0.1"
+technologies:
+  - id: stackfile
+    description: Stackfile definition itself
+    detect:
+      include:
+        - "**/.stack"
+        - "**/*.stack"
