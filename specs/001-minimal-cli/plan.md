@@ -1,6 +1,6 @@
 # Implementation Plan: Minimal CLI
 
-**Branch**: `001-minimal-cli` | **Date**: 2025-07-14 | **Spec**: [spec.md](./spec.md)  
+**Branch**: `001-minimal-cli` | **Date**: 2025-07-14 | **Input**: Feature specification  
 **Input**: Feature specification from `/specs/001-minimal-cli/spec.md`
 
 ## Summary

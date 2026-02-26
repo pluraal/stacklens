@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src",
     "lint:md": "markdownlint-cli2 \"**/*.md\" \"#node_modules\" \"#dist\"",
-    "lint:md-links": "node scripts/check-markdown-links.js",
+    "lint:md-links": "remark --frail --quiet \"specs/**/*.md\" \".specify/**/*.md\" \".github/**/*.md\"",
     "test": "node --test 'dist/**/*.test.js'",
     "ci": "npm run typecheck && npm run lint && npm run lint:md && npm run lint:md-links && npm run build"
   },
@@ -21,9 +21,9 @@
     "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.56.1",
     "eslint": "^10.0.2",
-    "glob": "^11.0.0",
-    "markdown-link-check": "^3.12.2",
     "markdownlint-cli2": "^0.15.0",
+    "remark-cli": "^12.0.1",
+    "remark-validate-links": "^13.1.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.1"
   },
